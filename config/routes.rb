@@ -10,17 +10,20 @@ Rails.application.routes.draw do
 
   post '/signup' => 'users#create'
 
-  put 'users/update' => 'users#update'
+  put '/users/update' => 'users#update'
 
-  get 'users/edit'
+  get '/users/edit'
 
-  get 'users/delete' => 'users#destroy'
+  get '/users/delete' => 'users#destroy'
 
-  get 'users/index'
+  get '/users/index'
 
-  get 'users/profile' => 'users#show'
+  get '/profile' => 'users#show'
 
-  delete 'users' => 'users#destroy'
+  delete '/users' => 'users#destroy'
+
+  get '/wins' => 'wins#index'
+
 
   resources :users
 
