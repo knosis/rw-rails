@@ -1,42 +1,29 @@
 Rails.application.routes.draw do
 
-  get 'wins/index'
+  get 'login' => 'sessions#new'
 
-  get 'wins/new'
+  post 'login' => 'sessions#create'
 
-  get 'wins/create'
+  get 'logout' => 'sessions#destroy'
 
-  get 'wins/edit'
+  get 'signup' => 'users#new'
 
-  get 'wins/update'
+  post 'signup' => 'users#create'
 
-  get 'wins/show'
+  put 'users/update' => 'users#update'
 
-  get 'wins/destroy'
+  get 'users/edit' => 'users#edit'
 
-  get '/login' => 'sessions#new'
+  get 'users/delete' => 'users#destroy'
 
-  post '/login' => 'sessions#create'
+  get 'users/index'
 
-  get '/logout' => 'sessions#destroy'
+  get 'profile' => 'users#show'
 
-  get '/signup' => 'users#new'
+  delete 'users' => 'users#destroy'
 
-  post '/signup' => 'users#create'
+  get 'wins' => 'wins#index'
 
-  put '/users/update' => 'users#update'
-
-  get '/users/edit'
-
-  get '/users/delete' => 'users#destroy'
-
-  get '/users/index'
-
-  get '/profile' => 'users#show'
-
-  delete '/users' => 'users#destroy'
-
-  get '/wins' => 'wins#index'
 
 
   resources :users
