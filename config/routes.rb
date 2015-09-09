@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   post '/signup' => 'users#create'
 
-  get 'users/update'
+  put 'users/update' => 'users#update'
 
   get 'users/edit'
 
@@ -20,6 +20,13 @@ Rails.application.routes.draw do
 
   get 'users/profile' => 'users#show'
 
+  delete 'users' => 'users#destroy'
+
+  resources :users
+
+  resources :categories do
+    resources :wins
+  end
 
 
 
