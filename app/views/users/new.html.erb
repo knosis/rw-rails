@@ -4,7 +4,7 @@
 
 <%= form_for :user, url: '/users' do |f| %>
 
-  Name: <%= f.text_field :name %>
+  Name: <%= f.text_field :login %>
   Password: <%= f.password_field :password %>
   Password Confirmation: <%= f.password_field :password_confirmation %>
   <%= f.submit "Submit" %>
