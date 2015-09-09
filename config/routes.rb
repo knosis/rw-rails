@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'wins/index'
+
+  get 'wins/new'
+
+  get 'wins/create'
+
+  get 'wins/edit'
+
+  get 'wins/update'
+
+  get 'wins/show'
+
+  get 'wins/destroy'
+
   get '/login' => 'sessions#new'
 
   post '/login' => 'sessions#create'
