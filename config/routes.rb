@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'client_app_controller/show'
-
   get 'login' => 'sessions#new'
 
   post 'login' => 'sessions#create'
@@ -12,7 +10,19 @@ Rails.application.routes.draw do
 
   post 'signup' => 'users#create'
 
+  put 'users/update' => 'users#update'
 
+  get 'users/edit' => 'users#edit'
+
+  get 'users/delete' => 'users#destroy'
+
+  get 'users/index'
+
+  get 'profile' => 'users#show'
+
+  delete 'users' => 'users#destroy'
+
+  get 'wins' => 'wins#index'
 
 
 
@@ -31,6 +41,7 @@ Rails.application.routes.draw do
 
   get '*path' => 'client_app#show'
   root 'client_app#show'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
