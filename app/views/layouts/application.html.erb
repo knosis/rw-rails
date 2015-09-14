@@ -18,7 +18,8 @@
   <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
 <% end %>
 
-<%= yield %>
+<%= react_component('RootComponent', {data_jason: @categories.to_json}) %>
+
 <div id="content"></div>
 
 <script type=text/jsx>
