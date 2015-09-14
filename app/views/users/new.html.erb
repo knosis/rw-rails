@@ -2,7 +2,7 @@
 
 <h1>Signup!</h1>
 
-<%= form_for :user, url: '/create' do |f| %>
+<%= form_for :user, url: signup_path(@user), method: :post do |f| %>
 
   Name: <%= f.text_field :login %>
   Password: <%= f.password_field :password %>
