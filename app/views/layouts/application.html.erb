@@ -13,31 +13,12 @@
   | <%= link_to "Categories", categories_path %>
   | <%= link_to "New Category", new_category_path %>
   | <%= link_to "Wins", wins_path %>
-  | <%= link_to "Logout", '/logout' %>
 <% else %>
   <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
 <% end %>
 
 <%= react_component('RootComponent', {data_jason: @categories.to_json}) %>
 
-<div id="content"></div>
-
-<script type=text/jsx>
-var CommentBox = React.createClass({
-  render: function() {
-    return (
-      <div className="commentBox">
-        Hello, world! I am a CommentBox.
-      </div>
-    );
-  }
-});
-React.render(
-  <CommentBox />,
-  document.getElementById('content')
-);
-
-</script>
 
 </body>
 </html>

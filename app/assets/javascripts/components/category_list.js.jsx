@@ -5,19 +5,19 @@ var CategoryList = React.createClass({
 
   getInitialState: function() {
     return {
-      @categories: {categories: []}
+      data: {categories: []}
     }
   },
 
   render: function() {
     return (
       <ul className="CategoryList">
-        {this.props.@categories.categories.map(function(name){
+        {this.props.categories.map(function(name){
           return <li key={name}>{name}</li>
         })
       }
-          {Object.keys(@categories).map(function(name) {
-            return <div>Category: {@categories[name]}</div>;
+          {Object.keys(categories).map(function(name) {
+            return <div>Category: {categories[name]}</div>;
           })}
       </ul>
     );
