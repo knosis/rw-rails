@@ -1,7 +1,10 @@
 class CategoriesController < ApplicationController
 
+  before_filter :authorize
+
   def index
-    render json: Category.all
+    @categories = Category.all
+    render json: @categories
   end
 
   def new
@@ -17,6 +20,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:category_id])
+    render json: @category
   end
 
   def edit

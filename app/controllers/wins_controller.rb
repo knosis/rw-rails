@@ -1,8 +1,10 @@
 class WinsController < ApplicationController
-  class CategoriesController < ApplicationController
+
+  before_filter :authorize
 
   def index
-    render json: Win.all
+    @wins = Win.all
+    render json: @wins
   end
 
   def new
@@ -20,6 +22,7 @@ class WinsController < ApplicationController
   def show
     @win = Win.find(params[:id])
     @win = @category.wins.find(params[:id])
+    render json: @win
   end
 
   def edit
@@ -47,7 +50,7 @@ class WinsController < ApplicationController
 private
 
   def win_params
-    params.require(:win).permit(:name)
+    params.require(:win).permit(:title, :content, :score, :event_date, :remind_at, :category_id)
   end
 
 

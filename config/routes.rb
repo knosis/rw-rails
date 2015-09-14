@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  format_json = ->(request) do
+    request.format == 'json'
+  end
+
   get 'login' => 'sessions#new'
 
   post 'login' => 'sessions#create'
@@ -12,24 +16,20 @@ Rails.application.routes.draw do
 
   put 'users/update' => 'users#update'
 
-  get 'users/edit' => 'users#edit'
-
-  get 'users/delete' => 'users#destroy'
-
-  get 'users/index'
-
   get 'profile' => 'users#show'
 
-  delete 'users' => 'users#destroy'
+  get 'categories/:category_id/wins' => 'wins#index'
 
   get 'wins' => 'wins#index'
 
-
+  post 'categories/:category_id/wins' => 'wins#create'
 
   resources :users
 
-  resources :categories do
-    resources :wins
+  scope constraints: format_json do
+    resources :categories do
+      resources :wins
+    end
   end
 
 
@@ -39,8 +39,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  get '*path' => 'client_app#show'
-  root 'client_app#show'
+  # get '*path' => 'categories#index'
+  root 'categories#index'
 
 
   # Example of regular route:

@@ -1,7 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Category.create(name: "Work and Projects")
+Category.create(name: "Wins with Friends")
+Category.create(name: "Interview Wins")
+Category.create(name: "Family")
+Category.create(name: "Finished Reading")
+Category.create(name: "Overcame an Obstacle")
+Category.create(name: "Random Wins")
+
+Win.create(title: "Welcome to Remember Win", score: 1, content: "You are obviously an intelligent and charming person who makes great decisions. You have many accomplishments ahead of you. Save the highlights.", category_id: 7)
+Win.create(title: "How to Edit Categories", score: 1, content: "From the Wins page, select the + button, then click Edit on the What Went Well page.", category_id: 7)
+Win.create(title: "What is a Remember Win?", score: 1, content: "A Remember Win is an event or a story you don't want to forget.", category_id: 7)
+
