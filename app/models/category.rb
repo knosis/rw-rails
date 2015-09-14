@@ -1,8 +1,4 @@
 class Category < ActiveRecord::Base
-  has_many :events
-  has_many :wins, :through => :events
-  has_many :personalizations
-  has_many :lists, :through => :personalizations
-
+  has_many :wins
   belongs_to :list
 end
