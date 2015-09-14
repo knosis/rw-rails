@@ -13,3 +13,73 @@
  *= require_tree .
  *= require_self
  */
+
+  .cat-header {
+    margin: 35px;
+    font-size: 48px;
+    font-family: arial;
+    text-decoration: underline;
+  }
+
+  .win-header {
+    margin: 35px;
+    font-size: 48px;
+    font-family: arial;
+    text-decoration: underline;
+  }
+
+ .catblock {
+    margin: 0px;
+    font-size: 36px;
+    padding: 35px 100px;
+  }
+
+  .winblock {
+    margin: 0px;
+    font-size: 36px;
+    padding: 35px 100px;
+  }
+
+  .debug {
+    border: 1px solid red;
+  }
+
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+

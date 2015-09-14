@@ -42,5 +42,8 @@ Rails.application.routes.draw do
   # get '*path' => 'categories#index'
   root 'categories#index'
 
+  get 'app' => 'client_app#show'
+
+  get 'app_wins' => 'client_app#index'
 
 end

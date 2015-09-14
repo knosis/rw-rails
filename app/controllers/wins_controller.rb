@@ -53,27 +53,4 @@ private
     params.require(:win).permit(:title, :content, :score, :event_date, :remind_at, :category_id)
   end
 
-
-end
-
-  def index
-  end
-
-  def new
-  end
-
-  def create
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def show
-  end
-
-  def destroy
-  end
 end

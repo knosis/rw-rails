@@ -9,7 +9,7 @@ var RootComponent = React.createClass({
   }
 });
 
-React.render(
-  <CommentBox />,
-  document.getElementById('content')
-  )
+// React.render(
+//   <CategoryList />,
+//   document.body
+//   )

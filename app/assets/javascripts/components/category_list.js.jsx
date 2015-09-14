@@ -1,7 +1,19 @@
+ var CategoryWinButton = React.createClass({
+    render: function() {
+      return <button className="debug btn btn-default pull-right">{this.props.data}</button>;
+    }
+  });
+
+var ListItemWrapper = React.createClass({
+  render: function() {
+    return <div className="catblock debug">{this.props.data}</div>;
+  }
+});
+
 var CategoryList = React.createClass({
-  // propTypes: {
-  //   name: React.PropTypes.string
-  // },
+  propTypes: {
+    name: React.PropTypes.string
+  },
 
   getInitialState: function() {
     return {
@@ -11,15 +23,16 @@ var CategoryList = React.createClass({
 
   render: function() {
     return (
-      <ul className="CategoryList">
-        {this.props.categories.map(function(name){
-          return <li key={name}>{name}</li>
-        })
-      }
-          {Object.keys(categories).map(function(name) {
-            return <div>Category: {categories[name]}</div>;
-          })}
-      </ul>
+      <div className="CategoryList debug">
+         {this.props.categories.map(function(cat){
+      return <ListItemWrapper key={cat.id} data={cat.win} />;
+    })}
+      </div>
     );
   }
 });
+
+React.render(
+  <CategoryList />,
+  document.body
+);
