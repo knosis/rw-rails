@@ -16,12 +16,15 @@ var WinsList = React.createClass({
   },
 
   render: function() {
-    return (
-      <div className="WinList debug">
-         {this.props.categories.map(function(cat){
-      return <WinItemWrapper key={cat.id} data={cat.id.wins} />;
-    })}
+   var catwins = this.props.categories.map(function(catwin){
+       return <ListItemWrapper key={cat.id} data={catwin.id.wins} />
+    });
+      return (
+    <div className="WinList debug">
+      <div className="winblock debug">
+        {catwins}
       </div>
-    );
+    </div>
+    )
   }
 });

@@ -1,38 +1,43 @@
- var CategoryWinButton = React.createClass({
+ var NewWinButton = React.createClass({
     render: function() {
-      return <button className="debug btn btn-default pull-right">{this.props.data}</button>;
+      return <button className="debug btn btn-default pull-right clearfix">{this.props.data}</button>;
     }
   });
 
-var ListItemWrapper = React.createClass({
+var CategoryListItem = React.createClass({
+  propTypes:{
+    category: React.PropTypes.object.isRequired
+  },
   render: function() {
-    return <div className="catblock debug">{this.props.data}</div>;
+    return (
+       <a className="category-wins-block link-less debug" href={"/categories/"+this.props.category.id+"/wins"}>
+        <span className="debug catblock">{this.props.category.name}</span>
+        </a>
+    );
   }
 });
 
 var CategoryList = React.createClass({
   propTypes: {
-    name: React.PropTypes.string
+    categories: React.PropTypes.array.isRequired,
+    name: React.PropTypes.string,
   },
 
   getInitialState: function() {
-    return {
-      data: {categories: []}
-    }
+    return {categories: []};
   },
 
   render: function() {
+    var categories = this.props.categories.map(function(category){
+       return <CategoryListItem key={category.id} category={category} />
+    });
     return (
-      <div className="CategoryList debug">
-         {this.props.categories.map(function(cat){
-      return <ListItemWrapper key={cat.id} data={cat.win} />;
-    })}
+      <div>
+      <div className="CategoryList clearfix category-container debug">
+          {categories}
+      </div>
       </div>
     );
   }
 });
 
-React.render(
-  <CategoryList />,
-  document.body
-);

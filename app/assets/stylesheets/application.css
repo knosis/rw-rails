@@ -14,37 +14,35 @@
  *= require_self
  */
 
-  .cat-header {
+.cat-header {
+    margin: 35px 100px;
+    font-size: 48px;
+    font-family: arial;
+    text-decoration: underline;
+  }
+
+.win-header {
     margin: 35px;
     font-size: 48px;
     font-family: arial;
     text-decoration: underline;
   }
 
-  .win-header {
-    margin: 35px;
-    font-size: 48px;
-    font-family: arial;
-    text-decoration: underline;
+.catblock {
+    margin: 0px;
+    font-size: 36px;
+    margin-left: 50px;
   }
 
- .catblock {
+.winblock {
     margin: 0px;
     font-size: 36px;
     padding: 35px 100px;
   }
 
-  .winblock {
-    margin: 0px;
-    font-size: 36px;
-    padding: 35px 100px;
-  }
-
-  .debug {
+.debug {
     border: 1px solid red;
   }
-
-
 
 .btn-primary {
     color: #fff;
@@ -74,6 +72,37 @@
     border-radius: 4px;
 }
 
+a.link-less {
+  text-decoration: none;
+  padding: 35px;
+}
+
+.category-container {
+  width: 100%;
+  display:block;
+}
+
+.category-wins-block {
+  display:block;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+.clearfix { display: block; }
+
+.pull-right {
+  float: right !important;
+  width: 50px;
+}
 
 
 
