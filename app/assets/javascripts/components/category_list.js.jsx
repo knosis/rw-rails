@@ -1,8 +1,3 @@
- var NewWinButton = React.createClass({
-    render: function() {
-      return <button className="debug btn btn-default pull-right clearfix">{this.props.data}</button>;
-    }
-  });
 
 var CategoryListItem = React.createClass({
   propTypes:{

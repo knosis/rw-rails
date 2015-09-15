@@ -16,7 +16,7 @@ var WinsList = React.createClass({
   },
 
   render: function() {
-   var catwins = this.props.categories.map(function(catwin){
+   var individualCategoryWins = this.props.categories.map(function(catwin){
        return <ListItemWrapper key={cat.id} data={catwin.id.wins} />
     });
       return (
