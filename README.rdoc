@@ -1,9 +1,17 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is an introduction and explanation of the concepts underlying the
+React framework. It will be easy enough for a new programmer to understand. It
+will involve primary strengths and flexibility that the framework has to offer.
 
-Things you may want to cover:
+It will also provide a few rules of thumb a coder can use to understand how the
+elements in the framework operate. The syntax may be difficult to understand at
+first site, but hopefully this explanation will clear things up.
+
+This project consists of a simple React client with data supplied by a Rails
+API server.
+
+
 
 * Ruby version
 
@@ -15,14 +23,5 @@ Things you may want to cover:
 
 * Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+<tt>rake doc:app</tt
