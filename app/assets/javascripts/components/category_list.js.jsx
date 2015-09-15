@@ -1,4 +1,8 @@
 
+
+var ESCAPE_KEY = 27;
+var ENTER_KEY = 13;
+
 var CategoryListItem = React.createClass({
   propTypes:{
     category: React.PropTypes.object.isRequired

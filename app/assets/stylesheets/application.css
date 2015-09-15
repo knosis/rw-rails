@@ -10,28 +10,31 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require_materialize
  *= require_tree .
  *= require_self
  */
 
 .cat-header {
-    margin: 35px 100px;
+    margin: 15px 100px 0;
     font-size: 48px;
-    font-family: arial;
-    text-decoration: underline;
+    font-family: 'Fugaz One', cursive;
   }
 
 .win-header {
     margin: 35px;
     font-size: 48px;
     font-family: arial;
-    text-decoration: underline;
   }
 
 .catblock {
     margin: 0px;
-    font-size: 36px;
+    font-size: 42px;
+    font-weight: lighter;
     margin-left: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    letter-spacing: 0.1em;
   }
 
 .winblock {
@@ -41,7 +44,7 @@
   }
 
 .debug {
-    border: 1px solid red;
+    border: 0px solid white;
   }
 
 .btn-primary {
