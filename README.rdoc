@@ -11,8 +11,7 @@ first site, but hopefully this explanation will clear things up.
 This project consists of a simple React client with data supplied by a Rails
 API server.
 
-Video screencast available on Youtube here: <a href="https://youtu.be/93pHh8z97rk">React Discovery Video</a>
+Video screencast available on Youtube here: https://youtu.be/93pHh8z97rk
 
 
 
-<tt>rake doc:app</tt
