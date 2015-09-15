@@ -9,7 +9,4 @@ var RootComponent = React.createClass({
   }
 });
 
-// React.render(
-//   <CategoryList />,
-//   document.body
-//   )
+
