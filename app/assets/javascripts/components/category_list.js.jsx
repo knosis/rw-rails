@@ -1,5 +1,3 @@
-
-
 var CategoryListItem = React.createClass({
   propTypes:{
     category: React.PropTypes.object.isRequired
@@ -8,7 +6,7 @@ var CategoryListItem = React.createClass({
     return (
        <a className="category-wins-block link-less debug" href={"/categories/"+this.props.category.id+"/wins"}>
         <span className="debug catblock">{this.props.category.name}</span>
-        </a>
+       </a>
     );
   }
 });
